@@ -1,14 +1,16 @@
 from pydantic import BaseModel
 from datetime import datetime
 
-class RolBase(BaseModel):
+class PermisoBase(BaseModel):
     nombre: str
-    descripcion: str | None = None
 
-class RolResponse(RolBase):
+class PermisoCreate(PermisoBase):
+    pass
+
+class PermisoResponse(PermisoBase):
     id: int
     created_at: datetime
     updated_at: datetime
-
+    
     class Config:
         orm_mode = True
