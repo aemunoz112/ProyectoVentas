@@ -7,7 +7,7 @@ class RolBase(BaseModel):
 
 class RolResponse(RolBase):
     id: int
-    created_at: str
+    created_at: datetime
     updated_at: datetime
 
     class Config:
